@@ -1,5 +1,5 @@
 package Pattern;
-
+import java.util.ArrayList;
 /**
  * An interface for all Observers
  */
@@ -10,5 +10,5 @@ public interface Observer {
 	 * @param o
 	 *            the observed subject that has changed
 	 */
-	public void update(Observable o);
+	public void update(Observable o, ArrayList<CourseRecord> courseData);
 }

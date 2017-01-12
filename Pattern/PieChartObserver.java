@@ -44,9 +44,9 @@ public class PieChartObserver extends JPanel implements Observer {
     }
 
     @Override
-    public void update(Observable o) {
-        CourseData data = (CourseData) o;
-        this.courseData = data.getUpdate();
+    public void update(Observable o, ArrayList<CourseRecord> courseData) {
+
+        this.courseData = courseData;
         this.setPreferredSize(new Dimension(2 * LayoutConstants.xOffset
                 + (LayoutConstants.barSpacing + LayoutConstants.barWidth)
                 * this.courseData.size(), LayoutConstants.graphHeight + 2
